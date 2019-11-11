@@ -225,7 +225,9 @@ class Backtesting:
             open_rate=buy_row.open,
             open_date=buy_row.date,
             stake_amount=stake_amount,
-            amount=stake_amount if not isinstance(stake_amount, str) else 0.005 / buy_row.open,
+            amount=stake_amount
+            if not isinstance(stake_amount, str)
+            else 0.005 / buy_row.open,
             fee_open=self.fee,
             fee_close=self.fee,
             is_open=True,
